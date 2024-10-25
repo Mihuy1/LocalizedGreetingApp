@@ -45,4 +45,11 @@ class LocalizedGreetingTest {
         assertEquals("سلام! به برنامه ما خوش آمدید", messages.getString("greeting"));
     }
 
+    @Test
+    void testJapaneseLocale() {
+        Locale locale = new Locale("ja", "JP");
+        ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
+        assertEquals("こんにちは", messages.getString("greeting"));
+    }
+
 }
